@@ -24,8 +24,6 @@ def save_testing_log(prompt, average_time, note):
         file.write(' - Average time: ' + str(average_time) + '\n')
         file.write(' - Note: ' + note + '\n\n')
 
-
-
 def main():
     prompt = input('Kind of test: ')
     
@@ -41,5 +39,6 @@ def main():
     print(average)
     note = input('Note after testing: ')
     save_testing_log(prompt, average, note)
+    print('Successfully Save This Test')
 
 main()
