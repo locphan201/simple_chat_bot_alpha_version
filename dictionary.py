@@ -32,22 +32,46 @@ class Vocabulary:
         self.alphabet[word[0]][word] = definition
     
     def find(self, word):
-        if word == '':
-            print('Cannot find an empty word')
-            return []
-        elif self.alphabet[word[0]].get(word):
-            return [self.alphabet[word[0]].get(word)]
-        else:
-            print('\'', word, '\' is not in the database')
-            if (input('Add this word to the database? (Y/N) ')).lower() == 'y':
-                definition = input('Definition of word: ')
-                self.add(word, definition)
-                with open('data.txt', 'a') as file:
-                    file.write('\n' + word + ' : ' + definition)
+        find_word(self, word, 'data.txt')
     
     def print(self):
         for element in self.alphabet:
             print(element, ':', self.alphabet[element])
-    
+
+class Nouns(Vocabulary):
+    def __init__(self):
+        super().__init__()
+
+    def find(self, word):
+        find_word(self, word, 'nouns.txt')
+        
+class Verbs(Vocabulary):
+    def __init__(self):
+        super().__init__()
+
+    def find(self, word):
+        find_word(self, word, 'verbs.txt')
+        
+class Adjectives(Vocabulary):
+    def __init__(self):
+        super().__init__()
+
+    def find(self, word):
+        find_word(self, word, 'adjectives.txt')
+        
 def special_case(letter):
     return special_letter[letter]
+
+def find_word(self, word, filename):
+    if word == '':
+        print('Cannot find an empty word')
+        return []
+    elif self.alphabet[word[0]].get(word):
+        return [self.alphabet[word[0]].get(word)]
+    else:
+        print('\'', word, '\' is not in the database')
+        if (input('Add this word to the database? (Y/N) ')).lower() == 'y':
+            definition = input('Definition: ')
+            self.add(word, definition)
+            with open(filename, 'a') as file:
+                file.write(word + ' : ' + definition + '\n')

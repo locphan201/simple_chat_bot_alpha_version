@@ -1,18 +1,14 @@
-from dictionary import Vocabulary
+from dictionary import Nouns, Verbs, Adjectives
 
-def read_file(listOfWords):
-    with open('data.txt', encoding='UTF-8') as file:
+def read_file(listOfWords, filename):
+    with open(filename, encoding='UTF-8') as file:
         line = file.readline().replace('\n', '').split(' : ')
         listOfWords.add(line[0], line[1])
     return listOfWords
 
 def main():
-    listOfWords = Vocabulary()
-    
-    listOfWords = read_file(listOfWords)
-    # listOfWords.print()
-    listOfWords.find('tôi')
-    listOfWords.find('anh')
-    listOfWords.find('em')
+    noun = Nouns()
+    noun.add('a', 'test')
+    noun.print()
     
 main()
