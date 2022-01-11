@@ -34,6 +34,9 @@ class Vocabulary:
     def find(self, word):
         find_word(self, word, 'data.txt')
     
+    def get_list_of_words(self):
+        return self.alphabet
+    
     def print(self):
         for element in self.alphabet:
             print(element, ':', self.alphabet[element])

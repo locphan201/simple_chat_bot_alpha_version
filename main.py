@@ -1,14 +1,9 @@
 from dictionary import Nouns, Verbs, Adjectives
-
-def read_file(listOfWords, filename):
-    with open(filename, encoding='UTF-8') as file:
-        line = file.readline().replace('\n', '').split(' : ')
-        listOfWords.add(line[0], line[1])
-    return listOfWords
+from process_file import read_file, save_as_file
 
 def main():
-    noun = Nouns()
+    noun = read_file(Nouns(), 'nouns.txt')
     noun.add('a', 'test')
-    noun.print()
+    save_as_file(noun.get_list_of_words(), 'nouns.txt')
     
 main()
