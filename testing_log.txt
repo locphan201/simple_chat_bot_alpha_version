@@ -1,0 +1,6 @@
+11:10:08 11/01/2022
+ - Create empty Vocabulary objects
+ - Iterator: 1000000
+ - Average time: 5.961
+ - Note: Good contidion
+
