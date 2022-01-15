@@ -1,0 +1,7 @@
+nouns
+buổi sáng
+buổi trưa
+buổi tối
+verbs
+chào
+xin chào

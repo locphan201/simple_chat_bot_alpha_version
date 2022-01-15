@@ -1,16 +1,16 @@
 import time
 from datetime import datetime
-from dictionary import Vocabulary
+from topic import *
 
 #-------------------------------------------------#
 #-This is a tester for performance and efficiency-#
 #-------------------------------------------------#
 
 # Times to loop
-iterator = 1000000
+iterator = 100000
 # Block of codes needs to test
 def code_for_test():
-    s = Vocabulary()
+    test = Topic('greeting.txt')
 
 # Please don't change anything below
 def save_testing_log(prompt, average_time, note):
@@ -36,7 +36,7 @@ def main():
     t2 = time.time()
 
     average = round(((t1-t0) + (t2-t1))/2, 3)
-    print(average)
+    print(str(average) + ' seconds')
     note = input('Note after testing: ')
     save_testing_log(prompt, average, note)
     print('Successfully Save This Test')

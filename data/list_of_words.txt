@@ -1,0 +1,14 @@
+mình : pronouns.txt
+cậu : pronouns.txt
+bạn : pronouns.txt
+anh ấy : pronouns.txt
+cô ấy : pronouns.txt
+họ : pronouns.txt
+chúng mình : pronouns.txt
+nó : pronouns.txt
+chúng nó : pronouns.txt
+buổi sáng : greeting.txt
+buổi trưa : greeting.txt
+buổi tối : greeting.txt
+chào : greeting.txt
+xin chào : greeting.txt

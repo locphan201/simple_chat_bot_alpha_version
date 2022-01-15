@@ -1,7 +1,10 @@
-def read_file(listOfWords, filename):
+def read_file(filename):
+    listOfWords = {}
     with open(filename, encoding='UTF-8') as file:
-        line = file.readline().replace('\n', '').split(' : ')
-        listOfWords.add(line[0], line[1])
+        lines = file.readlines()
+        for line in lines:
+            line = line.replace('\n', '').split(' : ')
+            listOfWords[line[0]] = line[1]
     return listOfWords
 
 def save_as_file(listOfWords, filename):
@@ -10,3 +13,5 @@ def save_as_file(listOfWords, filename):
             for word in listOfWords[element]:
                 file.write(word + ' : ' + listOfWords[element][word] + '\n')
     print('Successfully Saved To File')
+    
+list_of_words = read_file('data\\list_of_words.txt')
