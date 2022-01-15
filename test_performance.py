@@ -21,7 +21,7 @@ def save_testing_log(prompt, average_time, note):
         file.write(dt_string + '\n')
         file.write(' - ' + prompt + '\n')
         file.write(' - Iterator: ' + str(iterator) + '\n')
-        file.write(' - Average time: ' + str(average_time) + '\n')
+        file.write(' - Average time: ' + str(average_time) + ' seconds' + '\n')
         file.write(' - Note: ' + note + '\n\n')
 
 def main():

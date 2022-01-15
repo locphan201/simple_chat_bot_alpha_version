@@ -1,12 +1,12 @@
 11:10:08 11/01/2022
  - Create empty Vocabulary objects
  - Iterator: 1000000
- - Average time: 5.961
+ - Average time: 5.961 seconds
  - Note: Good contidion
 
 20:11:57 15/01/2022
  - Create non-empty Topic objects
  - Iterator: 100000
- - Average time: 11.167
+ - Average time: 11.167 seconds
  - Note: Good
 
